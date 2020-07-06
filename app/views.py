@@ -47,10 +47,11 @@ def feed(request):
     return render(request, 'feed.html', context={'data': data})
 def upload(request): 
     mydb = mysql.connector.connect(
-    host="localhost",
+    host="db",
     user="root",
-    passwd="",
-    database="aspilos_log"
+    passwd="aspilos",
+    database="aspilos_log",
+    auth_plugin="mysql_native_password"
     )
 
     mycursor = mydb.cursor()
