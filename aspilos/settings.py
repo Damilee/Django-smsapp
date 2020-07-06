@@ -25,7 +25,11 @@ SECRET_KEY = '9q*$q5qisp=m&&^%5xzfcqnp3%)jd&8@11o-w24p5$dgr3ds2r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "db",
+    "127.0.0.1"
+]
 
 
 # Application definition
@@ -88,24 +92,10 @@ DATABASES = {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'app',
     'USER': 'root',
-    'PASSWORD': '',
-    'HOST': 'localhost',
-    'PORT': '',
-    'OPTIONS': {
-    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-    }
+    'PASSWORD': 'aspilos',
+    'HOST': 'db',
+    'PORT': '3306',
     },
-    'aspilos_log': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'aspilos',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-         }   
-    }
     
 }
 
@@ -153,7 +143,7 @@ STATICFILES_DIRS = (
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-TWILIO_ACCOUNT_SID = ''
-TWILIO_AUTH_TOKEN = ''
-TWILIO_PHONE_NUMBER = ''
+TWILIO_ACCOUNT_SID = 'ACc89ebe9083979b229f0024bdc57e0cfb'
+TWILIO_AUTH_TOKEN = '4a9989d254fce0a6e731ba7d1e81c5d2'
+TWILIO_PHONE_NUMBER = '+19726967261'
 
